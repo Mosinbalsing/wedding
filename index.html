@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation | Aarav & मिताली</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              900: '#2a0202',
+              800: '#4a0404',
+              700: '#630808',
+              100: '#f9ebeb'
+            },
+            gold: {
+              400: '#d4af37',
+              500: '#c5a028',
+              600: '#b08d20',
+              glow: '#fadd80'
+            },
+            cream: '#fffdd0'
+          },
+          fontFamily: {
+            script: ['Great Vibes', 'cursive'],
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Lato', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-royal-900 text-cream overflow-x-hidden selection:bg-gold-500 selection:text-royal-900">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
