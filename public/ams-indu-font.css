@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'AMS Indu Regular';
+  src: url('/AMS Indu Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-script, .marathi-text, .ams-apply {
+  font-family: 'AMS Indu Regular', cursive, sans-serif !important;
+}

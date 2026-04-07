@@ -3,9 +3,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 
+
 const invitationMarkup = `
   <audio id="weddingMusic" loop>
-    <source src="/Kudmayi-(Film-Version)(PaglaSongs).mp3" type="audio/ogg">
+    <source src="/Mangalashtake.mp3" type="audio/mpeg">
   </audio>
 
   <div id="musicControl" class="fixed bottom-6 right-6 z-50 cursor-pointer hidden">
@@ -29,9 +30,10 @@ const invitationMarkup = `
 
     <div id="entryContent" class="absolute inset-0 flex flex-col items-center justify-center z-[101] text-center px-4">
       <div class="relative p-10 border-4 border-double border-gold-500/50 bg-black/30 backdrop-blur-sm rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-700">
-        <h2 class="font-script text-gold-400 text-4xl md:text-6xl mb-4 entry-text">You Are Invited</h2>
+        <h2 class="marathi-text  text-gold-400 text-4xl md:text-6xl mb-4 entry-text">आमंत्रित </h2>
         <h1 class="font-serif text-white text-5xl md:text-8xl font-bold mb-8 entry-text tracking-wider drop-shadow-lg">
-          Aarav & <span class="marathi-text">मिताली</span>
+           <span class="marathi-text">saagar</span>
+          <span class="marathi-text">mitaali</span>
         </h1>
 
         <button id="openBtn" class="group relative px-10 py-5 bg-royal-900 border border-gold-500 text-gold-500 font-serif text-xl tracking-widest uppercase overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)]">
@@ -58,8 +60,9 @@ const invitationMarkup = `
 
         <p class="gsap-hero-reveal font-serif text-gold-400 tracking-[0.3em] uppercase mb-4 transform translate-y-10 opacity-0">Together with our families</p>
 
-        <h1 class="gsap-hero-reveal font-script text-7xl md:text-9xl text-cream mb-6 transform translate-y-10 opacity-0 text-shadow-gold">
-          Aarav <span class="text-gold-500">&</span> <span class="marathi-text">मिताली</span>
+        <h1 class="gsap-hero-reveal font-script text-7xl md:text-9xl text-cream mb-6 transform translate-y-10 opacity-0 text-shadow-gold"> 
+           <span class="marathi-text">saagar</span>
+          <span class="marathi-text">mitaali</span>
         </h1>
 
         <p class="gsap-hero-reveal font-serif text-xl md:text-2xl text-gold-200 mb-10 transform translate-y-10 opacity-0">
@@ -68,9 +71,9 @@ const invitationMarkup = `
 
         <div class="gsap-hero-reveal transform translate-y-10 opacity-0">
           <div class="inline-block border-y border-gold-500 py-3 px-8 backdrop-blur-sm bg-royal-900/30">
-            <span class="font-serif text-2xl tracking-widest">DECEMBER 12, 2026</span>
+            <span class="font-serif text-2xl tracking-widest">APRIL 21, 2026</span>
           </div>
-          <div class="mt-4 font-sans text-gold-300 tracking-wide">UDAIPUR, RAJASTHAN</div>
+          <div class="mt-4 font-sans text-gold-300 tracking-wide marathi-text">महाबळेश्वर, सातारा</div>
         </div>
 
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -95,9 +98,9 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform -rotate-12"></div>
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
+              <img src="../public/images/sagar.jpeg" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
             </div>
-            <h3 class="font-script text-4xl text-royal-900 mb-2">Aarav</h3>
+            <h3 class="font-script text-4xl text-royal-900 mb-2">saagar</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"The moment I saw her, I knew my search was over."</p>
           </div>
 
@@ -109,9 +112,9 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform -rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform rotate-12"></div>
-              <img src="https://plus.unsplash.com/premium_photo-1675107359841-eb9142494289?q=80&w=387&auto=format&fit=crop" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
+              <img src="../public/images/mitali.jpeg" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
             </div>
-            <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">मिताली</h3>
+            <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">mitaali</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"In him, I found my love, my best friend, and my home."</p>
           </div>
         </div>
@@ -125,7 +128,7 @@ const invitationMarkup = `
     <section class="py-24 bg-royal-900 relative">
       <div class="container mx-auto px-4">
         <div class="text-center mb-20">
-          <h2 class="font-serif text-4xl md:text-5xl text-gold-400 mb-2 section-title opacity-0">Wedding Events</h2>
+          <h2 class="marathi-text text-[30px] md:text-5xl text-gold-400 mb-2 section-title opacity-0">lagnaacaa saaehLaa</h2>
           <p class="font-sans text-cream opacity-70">A celebration of love and tradition</p>
         </div>
 
@@ -134,7 +137,7 @@ const invitationMarkup = `
 
           <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
             <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
-              <h3 class="font-serif text-3xl text-gold-400 mb-2">The Engagement</h3>
+              <h1 class="marathi-text text-4xl text-gold-400 mb-2">saaKar pauZa</h1>
               <p class="font-sans text-gold-200 text-lg mb-1">Dec 10, 2026 | 7:00 PM</p>
               <p class="text-cream opacity-80 text-sm">Hotel Taj Lake Palace</p>
               <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Ring Ceremony</p>
@@ -256,73 +259,27 @@ const invitationMarkup = `
       </div>
     </section>
 
-    <section class="py-24 bg-royal-900 relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
-        <i class="fas fa-mandala text-[20rem] text-gold-500 animate-spin-slow"></i>
-      </div>
-
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-xl mx-auto bg-royal-800 p-8 md:p-12 rounded-lg border border-gold-500/30 shadow-2xl rsvp-container">
-          <div class="text-center mb-8">
-            <i class="fas fa-envelope-open-text text-5xl text-gold-500 mb-4"></i>
-            <h2 class="font-serif text-4xl text-cream mb-2">RSVP</h2>
-            <p class="text-gold-200">Please confirm your presence by November 1st</p>
-          </div>
-
-          <form id="rsvpForm" class="space-y-6">
-            <div>
-              <label class="block text-gold-400 text-sm uppercase tracking-wider mb-2">Full Name</label>
-              <input type="text" class="w-full bg-royal-900 border-b border-gold-500 text-cream px-4 py-3 focus:outline-none focus:border-gold-300 transition-colors" placeholder="Enter your name" required>
-            </div>
-
-            <div>
-              <label class="block text-gold-400 text-sm uppercase tracking-wider mb-2">Number of Guests</label>
-              <select class="w-full bg-royal-900 border-b border-gold-500 text-cream px-4 py-3 focus:outline-none cursor-pointer">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-gold-400 text-sm uppercase tracking-wider mb-2">Attending?</label>
-              <div class="flex gap-4 mt-2">
-                <label class="flex items-center cursor-pointer">
-                  <input type="radio" name="attendance" class="form-radio text-gold-500 focus:ring-gold-500 bg-royal-900 border-gold-500" checked>
-                  <span class="ml-2 text-cream">Joyfully Accepts</span>
-                </label>
-                <label class="flex items-center cursor-pointer">
-                  <input type="radio" name="attendance" class="form-radio text-gold-500 focus:ring-gold-500 bg-royal-900 border-gold-500">
-                  <span class="ml-2 text-cream">Regretfully Declines</span>
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" class="w-full bg-gold-500 text-royal-900 font-bold font-serif py-4 hover:bg-cream transition-colors duration-300 mt-4">
-              SEND CONFIRMATION
-            </button>
-          </form>
-
-          <div id="rsvpSuccess" class="hidden text-center py-10">
-            <i class="fas fa-check-circle text-6xl text-green-500 mb-4 scale-0 success-icon"></i>
-            <h3 class="font-serif text-3xl text-cream mb-2">Thank You!</h3>
-            <p class="text-gold-200">Your response has been recorded.</p>
-            <p class="text-sm text-gray-400 mt-4">We look forward to seeing you.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <footer class="bg-black text-center py-10 border-t border-royal-800">
-      <h2 class="font-script text-4xl text-gold-500 mb-4">Aarav & <span class="marathi-text">मिताली</span></h2>
-      <p class="text-gray-500 text-sm uppercase tracking-widest">#Aarav<span class="marathi-text">मिताली</span>Wedding</p>
+      <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">mitaali</span></h2>
+      <p class="text-gray-500 text-sm uppercase tracking-widest">#saagar<span class="marathi-text">mitaali</span>Wedding</p>
       <p class="text-gray-700 text-xs mt-8">Designed with ❤️ for the special day</p>
     </footer>
   </main>
 `;
 
 export default function App() {
+  // Import the custom font CSS
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/ams-indu-font.css';
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
