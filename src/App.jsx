@@ -98,7 +98,7 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform -rotate-12"></div>
-              <img src="https://photos.app.goo.gl/SFjVLRzECpSaChDP6" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
+              <img src="https://ibb.co/cc9Yk4PQ" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
             </div>
             <h3 class="font-script text-4xl text-royal-900 mb-2">saagar</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"The moment I saw her, I knew my search was over."</p>
@@ -112,7 +112,7 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform -rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform rotate-12"></div>
-              <img src="https://photos.app.goo.gl/CK8ChsSnFAoeiGqH7" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
+              <img src="https://ibb.co/rRkWn90f" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
             </div>
             <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">mitaali</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"In him, I found my love, my best friend, and my home."</p>
