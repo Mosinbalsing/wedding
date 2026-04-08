@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { TextPlugin } from 'gsap/TextPlugin';
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 
-const sagarImageUrl = new URL('./assets/images/sagar.jpeg', import.meta.url).href;
-const mitaliImageUrl = new URL('./assets/images/mitali.jpeg', import.meta.url).href;
+const sagarImageUrl = new URL("./assets/images/sagar.jpeg", import.meta.url)
+  .href;
+const mitaliImageUrl = new URL("./assets/images/mitali.jpeg", import.meta.url)
+  .href;
 
 const renderAudioSection = () => `
   <audio id="weddingMusic" loop>
@@ -39,7 +41,7 @@ const renderEntryCurtainSection = () => `
         <h2 class="marathi-text text-gold-400 text-4xl md:text-6xl mb-4 entry-text">आमंत्रित</h2>
         <h1 class="font-serif text-white text-5xl md:text-8xl font-bold mb-8 entry-text tracking-wider drop-shadow-lg">
           <span class="marathi-text">saagar</span>
-          <span class="marathi-text">mitaali</span>
+          <span class="marathi-text">imataalia</span>
         </h1>
 
         <button id="openBtn" class="group relative px-10 py-5 bg-royal-900 border border-gold-500 text-gold-500 font-serif text-xl tracking-widest uppercase overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)]">
@@ -69,7 +71,7 @@ const renderHeroSection = () => `
 
         <h1 class="gsap-hero-reveal font-script text-7xl md:text-9xl text-cream mb-6 transform translate-y-10 opacity-0 text-shadow-gold">
           <span class="marathi-text">saagar</span>
-          <span class="marathi-text">mitaali</span>
+          <span class="marathi-text">imataalia</span>
         </h1>
 
         <p class="gsap-hero-reveal font-serif text-xl md:text-2xl text-gold-200 mb-10 transform translate-y-10 opacity-0">
@@ -123,7 +125,7 @@ const renderStorySection = ({ sagarUrl, mitaliUrl }) => `
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform rotate-12"></div>
               <img src="${mitaliUrl}" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
             </div>
-            <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">mitaali</h3>
+            <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">imataalia</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"In him, I found my love, my best friend, and my home."</p>
           </div>
         </div>
@@ -139,7 +141,7 @@ const renderTimelineSection = () => `
     <section class="py-24 bg-royal-900 relative">
       <div class="container mx-auto px-4">
         <div class="text-center mb-20">
-          <h2 class="marathi-text text-[30px] md:text-5xl text-gold-400 mb-2 section-title opacity-0">lagnaacaa saaehLaa</h2>
+          <h2 class="marathi-text  text-[30px] md:text-8xl text-gold-400 mb-2 section-title opacity-0">lagnaacaa saaehLaa</h2>
           <p class="font-sans text-cream opacity-70">A celebration of love and tradition</p>
         </div>
 
@@ -148,9 +150,9 @@ const renderTimelineSection = () => `
 
           <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
             <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
-              <h1 class="marathi-text text-4xl text-gold-400 mb-2">saaKar pauZa</h1>
-              <p class="font-sans text-gold-200 text-lg mb-1">Dec 10, 2026 | 7:00 PM</p>
-              <p class="text-cream opacity-80 text-sm">Hotel Taj Lake Palace</p>
+              <h1 class="marathi-text text-6xl text-gold-400 mb-2">saaKarpauDa</h1>
+              <p class="font-sans text-gold-200 text-lg mb-1">April 21, 2026 | 10:015 AM</p>
+              <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
               <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Ring Ceremony</p>
             </div>
             <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-royal-900 border-2 border-gold-500 rounded-full z-10 flex items-center justify-center order-2">
@@ -175,73 +177,60 @@ const renderTimelineSection = () => `
               <div class="w-3 h-3 bg-gold-500 rounded-full"></div>
             </div>
             <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
-              <h3 class="font-serif text-3xl text-gold-400 mb-2">Mehendi Ceremony</h3>
-              <p class="font-sans text-gold-200 text-lg mb-1">Dec 11, 2026 | 11:00 AM</p>
-              <p class="text-cream opacity-80 text-sm">Poolside, The Oberoi Udaivilas</p>
+              <h3 class="font-serif text-6xl text-gold-400 mb-2 marathi-text ">hLdI</h3>
+              <p class="font-sans text-gold-200 text-lg mb-1">April 22, 2026 | 11:00 AM</p>
+              <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
               <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Henna & Folk Songs</p>
             </div>
           </div>
 
+          
           <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
-            <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
-              <h3 class="font-serif text-3xl text-gold-400 mb-2">Sangeet Night</h3>
-              <p class="font-sans text-gold-200 text-lg mb-1">Dec 11, 2026 | 8:00 PM</p>
-              <p class="text-cream opacity-80 text-sm">Grand Ballroom, Udaivilas</p>
-              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Dance & Music</p>
-            </div>
-            <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-royal-900 border-2 border-gold-500 rounded-full z-10 flex items-center justify-center order-2">
-              <div class="w-3 h-3 bg-gold-500 rounded-full"></div>
-            </div>
-            <div class="w-full md:w-[45%] pl-12 order-3">
-              <div class="bg-royal-800 p-6 rounded-lg border border-gold-600/30 hover:border-gold-500 transition-colors duration-300 shadow-lg group">
-                <i class="fas fa-music text-4xl text-gold-500 mb-4 group-hover:scale-110 transition-transform block"></i>
-                <p class="text-sm text-cream opacity-80 italic">"Dance the night away!"</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
-            <div class="w-full md:w-[45%] order-3 md:order-1 pl-12 md:pl-0 md:pr-12">
+       
+            <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
               <div class="bg-gradient-to-br from-gold-600 to-gold-400 p-6 rounded-lg shadow-2xl group text-right md:text-left transform scale-105 border-2 border-white/20">
                 <i class="fas fa-dove text-4xl text-royal-900 mb-4 group-hover:scale-110 transition-transform block"></i>
                 <p class="text-sm text-royal-900 font-bold italic">"The Royal Union."</p>
               </div>
-            </div>
+              </div>
             <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gold-500 border-4 border-royal-900 rounded-full z-10 flex items-center justify-center order-2 shadow-[0_0_15px_rgba(212,175,55,0.8)]">
               <i class="fas fa-heart text-royal-900 text-sm"></i>
             </div>
-            <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
-              <h3 class="font-serif text-4xl text-white mb-2">The Wedding</h3>
-              <p class="font-sans text-gold-300 text-lg mb-1">Dec 12, 2026 | 5:00 PM</p>
-              <p class="text-cream opacity-80 text-sm">Jagmandir Island Palace</p>
-              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Pheras & Reception</p>
+          <div class="w-full md:w-[45%] order-3 md:order-1 pl-12 md:pl-0 md:pr-12 text-right">
+              
+              <h3 class="font-serif text-6xl text-white mb-2 marathi-text ">avIvaah</h3>
+              <p class="font-sans text-gold-300 text-lg mb-1">April 21, 2026 | 6:15 PM</p>
+              <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
+              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">The Wedding</p>
+           
             </div>
+           
           </div>
         </div>
       </div>
     </section>
   `;
 
-  const renderVenueSection = () => `
+const renderVenueSection = () => `
     <section class="py-24 bg-cream text-royal-900">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div class="venue-card opacity-0 transform translate-y-10">
             <div class="text-center border-4 border-double border-gold-500 p-10 h-full relative">
               <div class="absolute top-0 left-0 text-gold-500 text-4xl -mt-6 -ml-4"><i class="fas fa-crown"></i></div>
-              <h2 class="font-serif text-3xl mb-8">Blessings From</h2>
+              <h2 class="font-serif text-6xl mb-8 marathi-text">AaaSiavaaQd</h2>
 
               <div class="mb-8">
-                <h3 class="font-bold uppercase tracking-widest text-sm mb-2 text-gold-600">Groom's Parents</h3>
-                <p class="font-serif text-xl">Mr. Rajesh & Mrs. Sunita Sharma</p>
+                <h3 class="font-bold uppercase tracking-widest text-sm mb-2 text-gold-600">नवरदेव चे पालक</h3>
+                <p class="font-serif text-4xl marathi-text">sauvaQnaa maaere</p>
               </div>
 
               <div class="mb-8">
-                <h3 class="font-bold uppercase tracking-widest text-sm mb-2 text-gold-600">Bride's Parents</h3>
-                <p class="font-serif text-xl">Mr. Vikram & Mrs. Anjali Mehta</p>
+                <h3 class="font-bold uppercase tracking-widest text-sm mb-2 text-gold-600">वधूचे पालक</h3>
+                <p class="font-serif text-4xl marathi-text ">rupaa gaaeLe , rajead^ gaaeLe</p>
               </div>
 
-              <p class="font-script text-2xl text-gold-600 mt-8">And Grandparents</p>
+              <p class="font-script text-2xl text-gold-600 mt-8">आणि आजी आजोबा</p>
             </div>
           </div>
 
@@ -275,8 +264,8 @@ const renderTimelineSection = () => `
 
 const renderFooterSection = () => `
     <footer class="bg-black text-center py-10 border-t border-royal-800">
-      <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">mitaali</span></h2>
-      <p class="text-gray-500 text-sm uppercase tracking-widest">#saagar<span class="marathi-text">mitaali</span>Wedding</p>
+      <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">imataalia</span></h2>
+      <p class="text-gray-500 text-sm uppercase tracking-widest">#saagar<span class="marathi-text">imataalia</span>Wedding</p>
       <p class="text-gray-700 text-xs mt-8">Designed with ❤️ for the special day</p>
     </footer>
 `;
@@ -298,14 +287,14 @@ ${renderFooterSection()}
 export default function App() {
   const invitationMarkup = createInvitationMarkup({
     sagarUrl: sagarImageUrl,
-    mitaliUrl: mitaliImageUrl
+    mitaliUrl: mitaliImageUrl,
   });
 
   // Import the custom font CSS
   useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '/ams-indu-font.css';
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/ams-indu-font.css";
     document.head.appendChild(link);
     return () => {
       document.head.removeChild(link);
@@ -319,14 +308,14 @@ export default function App() {
       const particleCount = 30;
 
       for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
 
         const size = Math.random() * 4 + 1;
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
-        particle.style.background = '#d4af37';
-        particle.style.borderRadius = '50%';
+        particle.style.background = "#d4af37";
+        particle.style.borderRadius = "50%";
         particle.style.left = `${Math.random() * 100}vw`;
         particle.style.top = `${Math.random() * 100}vh`;
 
@@ -339,8 +328,8 @@ export default function App() {
           duration: Math.random() * 5 + 5,
           repeat: -1,
           yoyo: true,
-          ease: 'sine.inOut',
-          delay: Math.random() * 5
+          ease: "sine.inOut",
+          delay: Math.random() * 5,
         });
       }
     }
@@ -349,71 +338,71 @@ export default function App() {
       const container = document.body;
       const petalCount = 20;
       const petalSVG =
-        'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE1LDBDNSwxMCwwLDIwLDE1LDMwQzMwLDIwLDI1LDEwLDE1LDB6IiBmaWxsPSIjZmZjMGNiIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=';
+        "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE1LDBDNSwxMCwwLDIwLDE1LDMwQzMwLDIwLDI1LDEwLDE1LDB6IiBmaWxsPSIjZmZjMGNiIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=";
 
       for (let i = 0; i < petalCount; i++) {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
         petal.style.backgroundImage = `url("${petalSVG}")`;
 
         const size = Math.random() * 20 + 10;
         petal.style.width = `${size}px`;
         petal.style.height = `${size}px`;
         petal.style.left = `${Math.random() * 100}vw`;
-        petal.style.top = '-50px';
+        petal.style.top = "-50px";
 
         container.appendChild(petal);
 
         gsap.to(petal, {
-          y: '110vh',
+          y: "110vh",
           x: `+=${Math.random() * 100 - 50}`,
           rotation: Math.random() * 360 + 360,
           duration: Math.random() * 5 + 8,
           repeat: -1,
-          ease: 'none',
-          delay: Math.random() * 5
+          ease: "none",
+          delay: Math.random() * 5,
         });
       }
     }
 
     function runHeroAnimations() {
-      gsap.to('.gsap-hero-reveal', {
+      gsap.to(".gsap-hero-reveal", {
         y: 0,
         opacity: 1,
         stagger: 0.2,
         duration: 1.5,
-        ease: 'power3.out',
-        delay: 0.5
+        ease: "power3.out",
+        delay: 0.5,
       });
 
-      gsap.to('.parallax-bg', {
+      gsap.to(".parallax-bg", {
         scrollTrigger: {
-          trigger: 'body',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
+          trigger: "body",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
         },
         y: 200,
-        scale: 1
+        scale: 1,
       });
     }
 
-    const openBtn = document.getElementById('openBtn');
-    const curtainLayer = document.getElementById('curtainLayer');
-    const audio = document.getElementById('weddingMusic');
-    const musicControl = document.getElementById('musicControl');
-    const musicIcon = document.getElementById('musicIcon');
-    const form = document.getElementById('rsvpForm');
+    const openBtn = document.getElementById("openBtn");
+    const curtainLayer = document.getElementById("curtainLayer");
+    const audio = document.getElementById("weddingMusic");
+    const musicControl = document.getElementById("musicControl");
+    const musicIcon = document.getElementById("musicIcon");
+    const form = document.getElementById("rsvpForm");
 
     let isPlaying = false;
 
-    gsap.to('.entry-text', {
+    gsap.to(".entry-text", {
       y: 0,
       opacity: 1,
       stagger: 0.2,
       duration: 1,
-      ease: 'power3.out',
-      delay: 0.5
+      ease: "power3.out",
+      delay: 0.5,
     });
 
     const onOpen = () => {
@@ -423,41 +412,57 @@ export default function App() {
           .play()
           .then(() => {
             isPlaying = true;
-            musicControl?.classList.remove('hidden');
+            musicControl?.classList.remove("hidden");
           })
           .catch(() => {});
       }
 
       const openTl = gsap.timeline({
         onComplete: () => {
-          if (curtainLayer) curtainLayer.style.display = 'none';
+          if (curtainLayer) curtainLayer.style.display = "none";
           ScrollTrigger.refresh();
-        }
+        },
       });
 
-      openTl.to('#entryContent', { opacity: 0, duration: 0.5, ease: 'power2.out' });
-      openTl.to('#centerGlow', { opacity: 0.8, duration: 1, scale: 1.5 }, '<');
-      openTl.to('.curtain-left', {
-        xPercent: -100,
-        skewX: 10,
-        scaleX: 0.9,
-        duration: 2.5,
-        ease: 'power4.inOut'
-      }, 'open');
-      openTl.to('.curtain-right', {
-        xPercent: 100,
-        skewX: -10,
-        scaleX: 0.9,
-        duration: 2.5,
-        ease: 'power4.inOut'
-      }, 'open');
-      openTl.to('#mainContent', {
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 2.5,
-        ease: 'power2.out'
-      }, '-=2.0');
-      openTl.set('.curtain-panel', { skewX: 0, scaleX: 1 });
+      openTl.to("#entryContent", {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+      openTl.to("#centerGlow", { opacity: 0.8, duration: 1, scale: 1.5 }, "<");
+      openTl.to(
+        ".curtain-left",
+        {
+          xPercent: -100,
+          skewX: 10,
+          scaleX: 0.9,
+          duration: 2.5,
+          ease: "power4.inOut",
+        },
+        "open",
+      );
+      openTl.to(
+        ".curtain-right",
+        {
+          xPercent: 100,
+          skewX: -10,
+          scaleX: 0.9,
+          duration: 2.5,
+          ease: "power4.inOut",
+        },
+        "open",
+      );
+      openTl.to(
+        "#mainContent",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 2.5,
+          ease: "power2.out",
+        },
+        "-=2.0",
+      );
+      openTl.set(".curtain-panel", { skewX: 0, scaleX: 1 });
 
       createParticles();
       createPetals();
@@ -469,14 +474,14 @@ export default function App() {
 
       if (isPlaying) {
         audio.pause();
-        musicIcon?.classList.remove('fa-music');
-        musicIcon?.classList.add('fa-volume-mute');
-        musicControl?.classList.remove('animate-pulse');
+        musicIcon?.classList.remove("fa-music");
+        musicIcon?.classList.add("fa-volume-mute");
+        musicControl?.classList.remove("animate-pulse");
       } else {
         audio.play();
-        musicIcon?.classList.add('fa-music');
-        musicIcon?.classList.remove('fa-volume-mute');
-        musicControl?.classList.add('animate-pulse');
+        musicIcon?.classList.add("fa-music");
+        musicIcon?.classList.remove("fa-volume-mute");
+        musicControl?.classList.add("animate-pulse");
       }
 
       isPlaying = !isPlaying;
@@ -489,101 +494,108 @@ export default function App() {
         y: -20,
         duration: 0.5,
         onComplete: () => {
-          form.style.display = 'none';
-          const success = document.getElementById('rsvpSuccess');
-          success?.classList.remove('hidden');
+          form.style.display = "none";
+          const success = document.getElementById("rsvpSuccess");
+          success?.classList.remove("hidden");
           gsap.fromTo(
-            '.success-icon',
+            ".success-icon",
             { scale: 0, rotation: -180 },
-            { scale: 1, rotation: 0, duration: 0.8, ease: 'elastic.out(1, 0.5)' }
+            {
+              scale: 1,
+              rotation: 0,
+              duration: 0.8,
+              ease: "elastic.out(1, 0.5)",
+            },
           );
-        }
+        },
       });
     };
 
-    openBtn?.addEventListener('click', onOpen);
-    musicControl?.addEventListener('click', onMusicToggle);
-    form?.addEventListener('submit', onRsvp);
+    openBtn?.addEventListener("click", onOpen);
+    musicControl?.addEventListener("click", onMusicToggle);
+    form?.addEventListener("submit", onRsvp);
 
-    gsap.utils.toArray('.section-title').forEach((title) => {
+    gsap.utils.toArray(".section-title").forEach((title) => {
       gsap.to(title, {
-        scrollTrigger: { trigger: title, start: 'top 80%' },
+        scrollTrigger: { trigger: title, start: "top 80%" },
         opacity: 1,
         y: 0,
-        duration: 1
+        duration: 1,
       });
     });
 
-    gsap.to('.couple-card', {
-      scrollTrigger: { trigger: '.couple-card', start: 'top 75%' },
+    gsap.to(".couple-card", {
+      scrollTrigger: { trigger: ".couple-card", start: "top 75%" },
       x: 0,
       opacity: 1,
       stagger: 0.3,
       duration: 1,
-      ease: 'back.out(1.7)'
+      ease: "back.out(1.7)",
     });
 
     ScrollTrigger.create({
-      trigger: '#storyTypewriter',
-      start: 'top 80%',
+      trigger: "#storyTypewriter",
+      start: "top 80%",
       onEnter: () => {
-        gsap.to('#storyTypewriter', {
+        gsap.to("#storyTypewriter", {
           text: {
             value:
-              "Love is not just about finding the right person, but creating the right relationship. It's not about how much love you have in the beginning but how much love you build until the end. We are starting our forever, and we want you to be part of it."
+              "Love is not just about finding the right person, but creating the right relationship. It's not about how much love you have in the beginning but how much love you build until the end. We are starting our forever, and we want you to be part of it.",
           },
           duration: 6,
-          ease: 'none'
+          ease: "none",
         });
-      }
+      },
     });
 
-    gsap.from('.timeline-line', {
+    gsap.from(".timeline-line", {
       scrollTrigger: {
-        trigger: '.timeline-item',
-        start: 'top 70%',
-        end: 'bottom 20%',
-        scrub: 1
+        trigger: ".timeline-item",
+        start: "top 70%",
+        end: "bottom 20%",
+        scrub: 1,
       },
       scaleY: 0,
-      transformOrigin: 'top center',
-      ease: 'none',
-      immediateRender: false
+      transformOrigin: "top center",
+      ease: "none",
+      immediateRender: false,
     });
 
-    gsap.utils.toArray('.timeline-item').forEach((item, i) => {
-      gsap.fromTo(item,
+    gsap.utils.toArray(".timeline-item").forEach((item, i) => {
+      gsap.fromTo(
+        item,
         {
           y: 50,
-          opacity: 0
+          opacity: 0,
         },
         {
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 85%'
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+          },
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: i * 0.1,
+          immediateRender: false,
         },
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: i * 0.1,
-        immediateRender: false
-      });
+      );
     });
 
-    gsap.utils.toArray('.venue-card').forEach((card) => {
+    gsap.utils.toArray(".venue-card").forEach((card) => {
       gsap.to(card, {
-        scrollTrigger: { trigger: card, start: 'top 85%' },
+        scrollTrigger: { trigger: card, start: "top 85%" },
         y: 0,
         opacity: 1,
         duration: 1,
-        ease: 'power2.out'
+        ease: "power2.out",
       });
     });
 
     return () => {
-      openBtn?.removeEventListener('click', onOpen);
-      musicControl?.removeEventListener('click', onMusicToggle);
-      form?.removeEventListener('submit', onRsvp);
+      openBtn?.removeEventListener("click", onOpen);
+      musicControl?.removeEventListener("click", onMusicToggle);
+      form?.removeEventListener("submit", onRsvp);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
