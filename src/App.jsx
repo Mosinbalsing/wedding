@@ -218,7 +218,7 @@ const renderVenueSection = () => `
 
               <div class="mb-8">
                 <h3 class="font-bold uppercase tracking-widest text-sm mb-2 text-gold-600">नवरदेव चे पालक</h3>
-                <p class="font-serif text-4xl marathi-text">sauvaQnaa maaere</p>
+                <p class="font-serif text-4xl marathi-text">sauvaQnaa maaere , SaiSakata maaere</p>
               </div>
 
               <div class="mb-8">
