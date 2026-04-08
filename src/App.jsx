@@ -3,18 +3,24 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 
+const sagarImageUrl = new URL('./assets/images/sagar.jpeg', import.meta.url).href;
+const mitaliImageUrl = new URL('./assets/images/mitali.jpeg', import.meta.url).href;
 
-const invitationMarkup = `
+const renderAudioSection = () => `
   <audio id="weddingMusic" loop>
     <source src="/Mangalashtake.mp3" type="audio/mpeg">
   </audio>
+`;
 
+const renderMusicControl = () => `
   <div id="musicControl" class="fixed bottom-6 right-6 z-50 cursor-pointer hidden">
     <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse">
       <i id="musicIcon" class="fas fa-music text-royal-900"></i>
     </div>
   </div>
+`;
 
+const renderEntryCurtainSection = () => `
   <div id="curtainLayer" class="fixed inset-0 z-[100] flex curtain-container overflow-hidden pointer-events-auto">
     <div id="centerGlow" class="absolute inset-0 stage-glow z-[90]"></div>
 
@@ -30,9 +36,9 @@ const invitationMarkup = `
 
     <div id="entryContent" class="absolute inset-0 flex flex-col items-center justify-center z-[101] text-center px-4">
       <div class="relative p-10 border-4 border-double border-gold-500/50 bg-black/30 backdrop-blur-sm rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-700">
-        <h2 class="marathi-text  text-gold-400 text-4xl md:text-6xl mb-4 entry-text">आमंत्रित </h2>
+        <h2 class="marathi-text text-gold-400 text-4xl md:text-6xl mb-4 entry-text">आमंत्रित</h2>
         <h1 class="font-serif text-white text-5xl md:text-8xl font-bold mb-8 entry-text tracking-wider drop-shadow-lg">
-           <span class="marathi-text">saagar</span>
+          <span class="marathi-text">saagar</span>
           <span class="marathi-text">mitaali</span>
         </h1>
 
@@ -45,8 +51,9 @@ const invitationMarkup = `
       <p class="mt-6 text-sm text-gold-300 entry-text italic opacity-80 animate-pulse">Tap to begin the celebration</p>
     </div>
   </div>
+`;
 
-  <main id="mainContent" class="opacity-0 filter blur-xl">
+const renderHeroSection = () => `
     <section class="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-30 scale-110 parallax-bg" alt="Wedding Background">
@@ -60,8 +67,8 @@ const invitationMarkup = `
 
         <p class="gsap-hero-reveal font-serif text-gold-400 tracking-[0.3em] uppercase mb-4 transform translate-y-10 opacity-0">Together with our families</p>
 
-        <h1 class="gsap-hero-reveal font-script text-7xl md:text-9xl text-cream mb-6 transform translate-y-10 opacity-0 text-shadow-gold"> 
-           <span class="marathi-text">saagar</span>
+        <h1 class="gsap-hero-reveal font-script text-7xl md:text-9xl text-cream mb-6 transform translate-y-10 opacity-0 text-shadow-gold">
+          <span class="marathi-text">saagar</span>
           <span class="marathi-text">mitaali</span>
         </h1>
 
@@ -81,7 +88,9 @@ const invitationMarkup = `
         </div>
       </div>
     </section>
+`;
 
+const renderStorySection = ({ sagarUrl, mitaliUrl }) => `
     <section class="py-24 bg-cream text-royal-900 relative overflow-hidden">
       <div class="absolute top-0 left-0 w-64 h-64 opacity-10">
         <img src="https://www.svgrepo.com/show/530219/mandala.svg" class="w-full h-full animate-spin-slow" alt="Mandala">
@@ -98,7 +107,7 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform -rotate-12"></div>
-              <img src="https://ibb.co/cc9Yk4PQ" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
+              <img src="${sagarUrl}" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Groom">
             </div>
             <h3 class="font-script text-4xl text-royal-900 mb-2">saagar</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"The moment I saw her, I knew my search was over."</p>
@@ -112,7 +121,7 @@ const invitationMarkup = `
             <div class="relative w-64 h-64 mx-auto mb-6">
               <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform -rotate-45"></div>
               <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform rotate-12"></div>
-              <img src="https://ibb.co/rRkWn90f" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
+              <img src="${mitaliUrl}" class="w-full h-full object-cover rounded-full shadow-xl grayscale hover:grayscale-0 transition-all duration-500" alt="Bride">
             </div>
             <h3 class="font-script marathi-text text-4xl text-royal-900 mb-2">mitaali</h3>
             <p class="font-sans text-gray-600 text-sm italic w-64 mx-auto">"In him, I found my love, my best friend, and my home."</p>
@@ -124,7 +133,9 @@ const invitationMarkup = `
         </div>
       </div>
     </section>
+`;
 
+const renderTimelineSection = () => `
     <section class="py-24 bg-royal-900 relative">
       <div class="container mx-auto px-4">
         <div class="text-center mb-20">
@@ -209,7 +220,9 @@ const invitationMarkup = `
         </div>
       </div>
     </section>
+  `;
 
+  const renderVenueSection = () => `
     <section class="py-24 bg-cream text-royal-900">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -258,18 +271,36 @@ const invitationMarkup = `
         </div>
       </div>
     </section>
+`;
 
-    
-
+const renderFooterSection = () => `
     <footer class="bg-black text-center py-10 border-t border-royal-800">
       <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">mitaali</span></h2>
       <p class="text-gray-500 text-sm uppercase tracking-widest">#saagar<span class="marathi-text">mitaali</span>Wedding</p>
       <p class="text-gray-700 text-xs mt-8">Designed with ❤️ for the special day</p>
     </footer>
+`;
+
+const createInvitationMarkup = ({ sagarUrl, mitaliUrl }) => `
+  ${renderAudioSection()}
+  ${renderMusicControl()}
+  ${renderEntryCurtainSection()}
+
+  <main id="mainContent" class="opacity-0 filter blur-xl">
+${renderHeroSection()}
+${renderStorySection({ sagarUrl, mitaliUrl })}
+${renderTimelineSection()}
+${renderVenueSection()}
+${renderFooterSection()}
   </main>
 `;
 
 export default function App() {
+  const invitationMarkup = createInvitationMarkup({
+    sagarUrl: sagarImageUrl,
+    mitaliUrl: mitaliImageUrl
+  });
+
   // Import the custom font CSS
   useEffect(() => {
     const link = document.createElement('link');
