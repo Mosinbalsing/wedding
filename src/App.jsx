@@ -185,27 +185,23 @@ const renderTimelineSection = () => `
           </div>
 
           
-          <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
-       
-            <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
-              <div class="bg-gradient-to-br from-gold-600 to-gold-400 p-6 rounded-lg shadow-2xl group text-right md:text-left transform scale-105 border-2 border-white/20">
-                <i class="fas fa-dove text-4xl text-royal-900 mb-4 group-hover:scale-110 transition-transform block"></i>
-                <p class="text-sm text-royal-900 font-bold italic">"The Royal Union."</p>
-              </div>
-              </div>
-            <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gold-500 border-4 border-royal-900 rounded-full z-10 flex items-center justify-center order-2 shadow-[0_0_15px_rgba(212,175,55,0.8)]">
-              <i class="fas fa-heart text-royal-900 text-sm"></i>
-            </div>
-          <div class="w-full md:w-[45%] order-3 md:order-1 pl-12 md:pl-0 md:pr-12 text-right">
-              
-              <h3 class="font-serif text-6xl text-white mb-2 marathi-text ">avIvaah</h3>
-              <p class="font-sans text-gold-300 text-lg mb-1">April 21, 2026 | 6:15 PM</p>
-              <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
-              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">The Wedding</p>
-           
-            </div>
-           
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
+          <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
+            <h3 class="font-serif text-6xl text-white mb-2 marathi-text">avIvaah</h3>
+            <p class="font-sans text-gold-300 text-lg mb-1">April 21, 2026 | 6:15 PM</p>
+            <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
+            <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">The Wedding</p>
           </div>
+          <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gold-500 border-4 border-royal-900 rounded-full z-10 flex items-center justify-center order-2 shadow-[0_0_15px_rgba(212,175,55,0.8)]">
+            <i class="fas fa-heart text-royal-900 text-sm"></i>
+          </div>
+          <div class="w-full md:w-[45%] pl-12 md:pl-12 order-3">
+            <div class="bg-gradient-to-br from-gold-600 to-gold-400 p-6 rounded-lg shadow-2xl group text-right md:text-left transform scale-105 border-2 border-white/20">
+              <i class="fas fa-dove text-4xl text-royal-900 mb-4 group-hover:scale-110 transition-transform block"></i>
+              <p class="text-sm text-royal-900 font-bold italic">"The Royal Union."</p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
