@@ -3,9 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
-const sagarImageUrl = new URL("./assets/images/sagar.jpeg", import.meta.url)
+const sagarImageUrl = new URL("./assets/images/sagar2.jpeg", import.meta.url)
   .href;
-const mitaliImageUrl = new URL("./assets/images/mitali.jpeg", import.meta.url)
+const mitaliImageUrl = new URL("./assets/images/mitali2.jpeg", import.meta.url)
   .href;
 
 const renderAudioSection = () => `
@@ -148,6 +148,26 @@ const renderTimelineSection = () => `
         <div class="relative max-w-4xl mx-auto">
           <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-gold-500 to-transparent transform md:-translate-x-1/2 timeline-line origin-top"></div>
 
+
+          <!-- Uthan Samarbha timeline event at the start -->
+          <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
+            <div class="w-full md:w-[45%] order-3 md:order-1 pl-12 md:pl-0 md:pr-12">
+              <div class="bg-royal-800 p-6 rounded-lg border border-gold-600/30 hover:border-gold-500 transition-colors duration-300 shadow-lg group text-right md:text-left">
+                <i class="fas fa-leaf text-4xl text-gold-500 mb-4 group-hover:scale-110 transition-transform block"></i>
+                <p class="text-sm text-cream opacity-80 italic">"The sacred beginning."</p>
+              </div>
+            </div>
+            <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-royal-900 border-2 border-gold-500 rounded-full z-10 flex items-center justify-center order-2">
+              <div class="w-3 h-3 bg-gold-500 rounded-full"></div>
+            </div>
+            <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
+              <h3 class="font-serif text-6xl text-gold-400 mb-2 marathi-text ">woNae samaaraeh</h3>
+              <p class="font-sans text-gold-200 text-lg mb-1">April 20, 2026 | 9:00 PM</p>
+              <p class="text-cream opacity-80 text-sm">लगीन घर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
+              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Sacred Ritual</p>
+            </div>
+          </div>
+
           <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
             <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
               <h1 class="marathi-text text-6xl text-gold-400 mb-2">saaKarpauDa</h1>
@@ -178,13 +198,12 @@ const renderTimelineSection = () => `
             </div>
             <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left pl-12 order-1 md:order-3">
               <h3 class="font-serif text-6xl text-gold-400 mb-2 marathi-text ">hLdI</h3>
-              <p class="font-sans text-gold-200 text-lg mb-1">April 22, 2026 | 11:00 AM</p>
+              <p class="font-sans text-gold-200 text-lg mb-1">April 21, 2026 | 11:00 AM</p>
               <p class="text-cream opacity-80 text-sm">कोटेश्वरी मंदिर भोसे, ता. महाबळेश्वर, जि. सातारा</p>
-              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Henna & Folk Songs</p>
+              <p class="text-xs text-gold-500 mt-2 uppercase tracking-widest">Sacred Ritual</p>
             </div>
           </div>
 
-          
         <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 timeline-item">
           <div class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
             <h3 class="font-serif text-6xl text-white mb-2 marathi-text">avIvaah</h3>
@@ -262,7 +281,7 @@ const renderVenueSection = () => `
 const renderFooterSection = () => `
     <footer class="bg-black text-center py-10 border-t border-royal-800">
       <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">imataalia</span></h2>
-      <p class="text-gray-500 text-sm uppercase tracking-widest">#Sagar<span class="marathi-text">Mitali</span>Wedding</p>
+      <p class="text-gray-500 text-sm uppercase tracking-widest">#Sagar<span class="">Mitali</span>Wedding</p>
       <p class="text-gray-700 text-xs mt-8">Designed with ❤️ for the special day</p>
     </footer>
 `;
