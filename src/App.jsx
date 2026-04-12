@@ -232,22 +232,23 @@ const renderVenueSection = () => `
 
           <div class="venue-card opacity-0 transform translate-y-10 delay-200">
             <div class="h-full bg-white shadow-xl p-4 border border-gold-200 rounded-lg">
-              <h2 class="font-serif text-2xl text-center mb-4 text-royal-900">The Royal Venue</h2>
+              <h2 class="font-serif text-2xl text-center mb-4 text-royal-900">The Venue</h2>
               <div class="w-full h-64 bg-gray-200 mb-4 relative overflow-hidden group rounded">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.6473090407767!2d73.6826693751429!3d24.576599978111953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cc51e5e050017%3A0xc457335607593d6a!2sThe%20Oberoi%20Udaivilas%2C%20Udaipur!5e0!3m2!1sen!2sin!4v1709400000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3796.0940453905323!2d73.758202!3d17.927767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU1JzQwLjAiTiA3M8KwNDUnMjkuNSJF!5e0!3m2!1sen!2sin!4v1775973208849!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style="border:0;"
                   allowfullscreen=""
                   loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
                 <div class="absolute inset-0 bg-gold-500/10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
               </div>
 
               <div class="text-center">
-                <p class="font-serif text-lg mb-4">The Oberoi Udaivilas, Udaipur</p>
-                <a href="https://maps.google.com/" target="_blank" class="inline-block bg-royal-900 text-gold-500 px-6 py-2 rounded-full hover:bg-gold-500 hover:text-royal-900 transition-colors uppercase text-sm tracking-wider font-bold">
+                <p class="font-serif text-lg mb-4">महाबळेश्वर, सातारा</p>
+                <a href="https://www.google.com/maps/place/17%C2%B055'40.0%22N+73%C2%B045'29.5%22E/@17.927767,73.758202,17z" target="_blank" class="inline-block bg-royal-900 text-gold-500 px-6 py-2 rounded-full hover:bg-gold-500 hover:text-royal-900 transition-colors uppercase text-sm tracking-wider font-bold">
                   <i class="fas fa-location-arrow mr-2"></i> Get Directions
                 </a>
               </div>
@@ -261,7 +262,7 @@ const renderVenueSection = () => `
 const renderFooterSection = () => `
     <footer class="bg-black text-center py-10 border-t border-royal-800">
       <h2 class="font-script text-4xl text-gold-500 mb-4">saagar  <span class="marathi-text">imataalia</span></h2>
-      <p class="text-gray-500 text-sm uppercase tracking-widest">#saagar<span class="marathi-text">imataalia</span>Wedding</p>
+      <p class="text-gray-500 text-sm uppercase tracking-widest">#Sagar<span class="marathi-text">Mitali</span>Wedding</p>
       <p class="text-gray-700 text-xs mt-8">Designed with ❤️ for the special day</p>
     </footer>
 `;
