@@ -94,10 +94,6 @@ const renderHeroSection = () => `
 
 const renderStorySection = ({ sagarUrl, mitaliUrl }) => `
     <section class="py-24 bg-cream text-royal-900 relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-64 h-64 opacity-10">
-        <img src="https://www.svgrepo.com/show/530219/mandala.svg" class="w-full h-full animate-spin-slow" alt="Mandala">
-      </div>
-
       <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
           <h2 class="font-serif text-4xl md:text-5xl text-royal-900 mb-4 section-title opacity-0">Our Story</h2>
